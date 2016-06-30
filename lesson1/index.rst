@@ -7,4 +7,6 @@ Introduction
 
    foss
    gislab
-   foss4g           
+   foss4g
+   qgis
+   grass-gis
