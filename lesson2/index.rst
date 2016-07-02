@@ -7,7 +7,8 @@ Geospatial data processing
 
    lidar
    terrain
-
+   hydrology
+              
 **Useful Links**
 
 * `GRASS loves lidar

@@ -104,8 +104,8 @@ or from the main toolbar.
 
    Example of importing vector layer from OGC GeoPackage file.
    
-Import raster data and compose
-------------------------------
+Import raster data and compose RGB
+----------------------------------
 
 Raster data is possible to import from the menu :menuselection:`File
 --> Import raster data --> Common import formats` or from the main
@@ -123,7 +123,13 @@ Accessing GRASS Modules
 -----------------------
 
 .. todo:: v.extract
-   
+
+.. code-block:: bash
+
+   v.extract input=cities where="nazev = 'Harrachov'" output=harrachov
+   v.extract input=cities where="nazev = 'Telč'" output=telc
+
+                
 QGIS Plugin
 -----------
 

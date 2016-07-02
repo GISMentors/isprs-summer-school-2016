@@ -1,6 +1,28 @@
-Lidar Analysis
-==============
+Working with Lidar data
+=======================
 
+Import Lidar data
+-----------------
+
+LAS format
+^^^^^^^^^^
+
+For importing LAS data are available two modules:
+
+* :grasscmd:`r.in.lidar` which create a new raster map
+* :grasscmd:`v.in.lidar` which create a new vector point map
+
+.. note:: GRASS must be compiled with support for `libLAS
+          <http://www.liblas.org>`_ library.
+            
+XYZ format
+^^^^^^^^^^
+
+For importing XYZ data are available two modules:
+
+* :grasscmd:`r.in.xyz` which create a new raster map
+* :grasscmd:`v.in.xyz` which create a new vector point map
+  
 Raster binning and classification
 ---------------------------------
 
