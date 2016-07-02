@@ -88,12 +88,14 @@ be very slope we will perform the computation on smaller area.
    v.surf.rst input=pr_TANV37_5g elevation=dem_37 slope=slope_37 pcurv=pcurv_37 npmin=80 tension=20 smooth=1
 
 .. tip:: Set higher npmin to reduce artifacts from segmentation
-         visible on slope and curvature maps (will be much slower!):
+   visible on slope and curvature maps (will be much slower!):
 
    .. code-block:: bash
                 
       g.region n=5626866 s=5626530 w=532642 e=533062 res=0.5 -pa
-
+      
+.. todo:: check speed & set region based on municipality
+                
 .. tip:: It can be also useful to set mask on areas without measured
          data. Convex hull created by :grasscmd:`v.hull` can be used
          for this purpose. The mask can be specified by

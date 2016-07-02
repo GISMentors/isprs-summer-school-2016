@@ -1,8 +1,4 @@
 QGIS
 ====
 
-Data vizualization
-------------------
-
-Map Composer
-------------
+.. todo:: pouze vizualizace dat (shp, gml, ortofoto)
