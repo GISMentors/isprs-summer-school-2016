@@ -18,6 +18,12 @@ Lessons
    lesson4/index
    lesson5/index
    lesson6/index
+   publication/introduction/index
+   publication/ows/index
+   publication/raster/index
+   publication/vector/index
+   publication/mapserver/index
+   publication/client/index
 
 Timetable
 =========
@@ -43,13 +49,17 @@ Timetable
 +-----------+----------------------------------+---------+
 | Day 10.7. | Topic                            | Lector  |
 +===========+==================================+=========+
-| Lesson 1  | Publication I.                   | Jáchym  |
+| Lesson 1  | Introduction                     | Jáchym  |
 +-----------+----------------------------------+---------+
-| Lesson 2  | Publication II.                  | Jáchym  |
+| Lesson 2  | Open Web Services                | Jáchym  |
 +-----------+----------------------------------+---------+
-| Lesson 3  |                                  |         |
+| Lesson 3  | Publication of raster data       | Jáchym  |
 +-----------+----------------------------------+---------+
-| Lesson 4  |                                  |         |
+| Lesson 4  | Publication of vector data       | Jáchym  |
++-----------+----------------------------------+---------+
+| Lesson 5  | Web Server programms             | Jáchym  |
++-----------+----------------------------------+---------+
+| Lesson 6  | Building client Web mapping app. | Jáchym  |
 +-----------+----------------------------------+---------+
 
 **Group II.**
