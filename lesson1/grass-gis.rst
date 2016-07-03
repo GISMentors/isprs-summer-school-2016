@@ -1,3 +1,13 @@
+.. |addraster| image:: ../_build/html/_static/icons/grass/layer-raster-add.png
+   :width: 1.5em
+.. |addvector| image:: ../_build/html/_static/icons/grass/layer-vector-add.png
+   :width: 1.5em
+.. |addrgb| image:: ../_build/html/_static/icons/grass/layer-raster-more.png
+   :width: 1.5em
+.. |addmulti| image:: ../_build/html/_static/icons/grass/layer-open.png
+   :width: 1.5em
+
+           
 GRASS GIS
 =========
 
@@ -93,8 +103,9 @@ Import vector data
 ------------------
 
 Dialog for importing vector data is accessible from menu
-:menuselection:`File --> Import vector data --> Common import formats`
-or from the main toolbar.
+:menuselection:`File --> Import vector data --> Common import
+formats`, from the main toolbar, or from command line as
+:grasscmd:`v.import` module.
 
 .. figure:: images/import-vector-toolbar.png
 
@@ -103,24 +114,164 @@ or from the main toolbar.
 .. figure:: images/import-vector.png
 
    Example of importing vector layer from OGC GeoPackage file.
-   
-Import raster data and compose RGB
-----------------------------------
+
+.. noteadvanced:: Import process can take a while. GRASS is a topological
+          GIS. It means that importing vector data doesn't mean only
+          converting data from one data format to another, but mainly
+          coverting from simple feature model to GRASS topological
+          model, see figure bellow.
+
+          .. figure:: images/grass7-topo.png
+             :class: middle
+                  
+             GRASS topological model.
+          
+          During this process also topological errors are
+          checked and repaired. Some topological errors is not
+          possible to repair automatically without user specification,
+          in this case the user can fix remaing error using
+          :grasscmd:`v.clean`.
+             
+Import raster data
+------------------
 
 Raster data is possible to import from the menu :menuselection:`File
---> Import raster data --> Common import formats` or from the main
-toolbar.
+--> Import raster data --> Common import formats`, from the main
+toolbar, or from command line as :grasscmd:`r.import` module.
 
-.. todo:: ortofoto + d.rgb
-   
-   
+.. figure:: images/import-raster-toolbar.png
+
+   Import raster data from the main toolbar.
+
+.. figure:: images/import-raster.png
+
+   Example of importing raster files in JPG format from
+   directory. Since raster files lacks spatial reference information
+   (project doesn't match) we will force overriding project check
+   (:menuselection:`Import settings --> Optional --> Override
+   projection check`).
+
+.. noteadvanced:: To avoid data duplication GRASS also allows linking
+                  raster data using :grasscmd:`r.external` (*Link
+                  external raster data*).
+
+.. note:: GRASS import raster bands as separate raster maps. Raster
+          maps are represented by regular grid. Three different types
+          are supported:
+
+          * CELL (integer)
+          * FCELL (float)
+          * DCELL (double)
+               
 Working with GUI
 ----------------
 
-.. todo:: doplnit
-   
+GRASS GUI consists two main windows:
+
+* Layer Manager :fignote:`(1.)`
+* Map Display (user can run multiple Map Display windows) :fignote:`(2.)`
+
+.. figure:: images/grass-gui.png
+   :class: middle
+        
+   Layer Manager and Map Display GUI components.
+
+Vector maps can be added similarly to raster from :menuselection:`File
+--> Map display --> Add vector` or from the Layer Manager toolbar
+|addvector|.
+
+.. figure:: images/d-vect.png
+
+   Dialog (:grasscmd:`d.rast`) for displaying vector data in the Map
+   Display.
+
+Raster maps can be added to layer tree from menu :menuselection:`File
+--> Map display --> Add raster` or from the Layer Manager toolbar
+|addraster|.
+
+.. figure:: images/d-rast.png
+
+   Dialog (:grasscmd:`d.vect`) for displaying raster data in the Map
+   Display.
+
+RGB orthophotos has been splited by GRASS into three separate raster
+maps:
+
+* red channel (``.1``)
+* green channel (``.2``)
+* blue channel (``.3``)
+
+You can multiple raster or vector maps from Layer Manager toolbar |addmulti|.
+
+.. figure:: images/add-raster-multi.png
+   :class: small
+        
+   Add multiple raster maps to layer tree.
+  
+RGB composition can be added from Layer Manager toolbar |addrgb|.
+
+.. figure:: images/add-rgb.png
+
+   Add RGB layer.
+
+.. figure:: images/d-rgb.png
+
+   Compose raster maps to RGB.
+
+.. figure:: images/data-vizualization.png
+   :class: large
+        
+   Example of data vizualization.
+
 Accessing GRASS Modules
 -----------------------
+
+GRASS is modular system which consists of several hundrends tools
+(called "modules"). They are accessible from the Layer Manager menu,
+"Modules" tab and from command prompt ("Console" tab).
+
+.. figure:: images/modules-tab.png
+
+   Searching module in Layer Manager.
+
+.. figure:: images/modules-cmd.png
+
+   Launching module from Layer Manager console.
+
+The commands (modules) can be called from GUI dialogs and command
+line. Figure bellow shows calling :grasscmd:`r.null` module. The
+ekvivalent command for console would be:
+
+.. code-block:: bash
+
+   r.null map=TANV37.1 setnull=0,255
+
+.. figure:: images/r-null.png
+
+   Dialog of :grasscmd:`r.null` module.
+
+.. note:: This command replaces in raster maps occurance of 0 a 255
+          values by NULL value (no-data). Note that before running
+          this command you need to set up computational region based
+          on selected raster map (:grasscmd:`g.region`).
+
+          .. figure:: images/set-region-rgb.png
+
+             Set computational region from RGB composition.
+
+          Also note that all three raster maps in composition should
+          be mofified by :grasscmd:`r.null`. This operation can be
+          automated by :grasscmd:`Graphical Modeler <g.gui.gmodeler>`
+          or by scriping in Python, see :doc:`Lesson 3
+          <../lesson3/index>` for details.
+          
+.. figure:: images/data-vizualization-null.png
+   :class: large
+        
+   Result of replacing 0 a 255 values by no-data value.
+
+Working with vector attributes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. todo:: v.extract
 
