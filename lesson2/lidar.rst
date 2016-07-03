@@ -1,8 +1,8 @@
 Working with Lidar data
 =======================
 
-Import Lidar data
------------------
+Import data
+-----------
 
 LAS format
 ^^^^^^^^^^
@@ -14,14 +14,97 @@ For importing LAS data are available two modules:
 
 .. note:: GRASS must be compiled with support for `libLAS
           <http://www.liblas.org>`_ library.
-            
-XYZ format
-^^^^^^^^^^
 
-For importing XYZ data are available two modules:
+Example:
 
-* :grasscmd:`r.in.xyz` which create a new raster map
-* :grasscmd:`v.in.xyz` which create a new vector point map
+.. code-block:: bash
+
+   r.in.lidar -oe input=pr_TANV37_5g.laz output=pr_TANV37_5g resolution=1
+   v.in.lidar -ot input=pr_TANV37_5g.laz output=pr_TANV37_5g
+
+.. note:: Flag :option:`-o` must be used in the case since input data
+          miss information about spatial reference system. Basic
+          metadata about imported data can be obtained by ``lasinfo``
+          command which is part of libLAS library.
+
+          .. code-block:: bash
+
+             lasinfo pr_TANV37_5g.laz
+
+             ...
+             Min X Y Z:                   531815.05 5625597.55 925.35
+             Max X Y Z:                   534548.84 5627727.26 1292.54
+             Spatial Reference:           None
+
+          Flag :option:`-t` skips creation of attribute table. The
+          import process will be significantly faster.
+
+          In the case of :grasscmd:`r.in.lidar` is also used flag
+          :option:`-e` which extends current computation region to
+          cover all imported points. Otherwise user needs to set up
+          computation region via :grasscmd:`g.region` as in the case
+          of :grasscmd:`r.in.xyz`, see section bellow. Spatial
+          resolution for output raster map is defined by
+          :option:`resolution` option. Note that computation region is
+          ignored when importing data using :grasscmd:`v.in.lidar`.
+
+Basic metadata about imported created raster maps
+can be optained by :grasscmd:`r.info`, or :grasscmd:`v.info` in the
+case of vector maps.
+
+.. code-block:: bash
+
+   r.info map=pr_TANV37_5g
+
+   ...
+   |   Data Type:    FCELL                                                      |
+   |   Rows:         2131                                                       |
+   |   Columns:      2734                                                       |
+   |   Total Cells:  5826154                                                    |
+   |        Projection: UTM (zone 33)                                           |
+   |            N:    5627728    S:    5625597   Res:     1                     |
+   |            E:     534549    W:     531815   Res:     1                     |
+   |   Range of data:    min = 925.355  max = 1292.47                           |
+   ...
+
+.. code-block:: bash
+                   
+   v.info pr_TANV37_5g
+
+   ...
+   |   Number of points:       3736392         Number of centroids:  0          |
+   |                                                                            |
+   |   Map is 3D:              Yes                                              |
+   |   Number of dblinks:      0                                                |
+   |                                                                            |
+   |   Projection: UTM (zone 33)                                                |
+   |                                                                            |
+   |               N:        5627727.26    S:        5625597.55                 |
+   |               E:         534548.84    W:         531815.05                 |
+   |               B:            925.35    T:           1292.54                 |
+   ...
+
+XYZ data
+^^^^^^^^
+
+XYZ data can be imported into raster map using :grasscmd:`r.in.xyz`
+command. The command must be run in two steps:
+
+#. First run to get region extent, flags :option:`-sg`. Then use
+   :grasscmd:`g.region` to set the region for import.
+#. Second to perform import, see example bellow.
+
+.. code-block:: bash
+
+   # 1a. get region extent
+   r.in.xyz -sg input=TANV37_5g.xyz out=TANV37_5g separator=space
+   n=-974000.01 s=-976000.01 e=-657499.99 w=-660000.05 b=925.35 t=1292.54
+
+   # 1b. set region and resolution (flag -a to align based on resolution)
+   g.region -a n=-974000.01 s=-976000.01 e=-657499.99 w=-660000.05 b=925.35 t=1292.54 res=1            
+
+   # 2. perform import
+   r.in.xyz input=TANV37_5g.xyz out=TANV37_5g separator=space
   
 Raster binning and classification
 ---------------------------------
@@ -106,8 +189,8 @@ be very slope we will perform the computation on smaller area.
 
 .. code-block:: bash
 
-   g.region vector=pr_TANV37_5g res=0.5 -pa
-   v.surf.rst input=pr_TANV37_5g elevation=dem_37 slope=slope_37 pcurv=pcurv_37 npmin=80 tension=20 smooth=1
+   g.region vector=pr_TANV37_5g res=1 -pa
+   v.surf.rst input=pr_TANV37_5g elevation=dem37 slope=slope37 pcurv=pcurv37 npmin=80 tension=20 smooth=1
 
 .. tip:: Set higher npmin to reduce artifacts from segmentation
    visible on slope and curvature maps (will be much slower!):
@@ -119,19 +202,21 @@ be very slope we will perform the computation on smaller area.
 .. todo:: check speed & set region based on municipality
                 
 .. tip:: It can be also useful to set mask on areas without measured
-         data. Convex hull created by :grasscmd:`v.hull` can be used
-         for this purpose. The mask can be specified by
-         :grasscmd:`r.mask` command (note that the mask will be
-         created only inside compuitational region), or simple define
-         by :option:`mask` option of :grasscmd:`v.surf.rst`.
+         data. Convex hull created by :grasscmd:`v.hull` or composed
+         orthophoto map can be used for this purpose. The mask can be
+         specified by :grasscmd:`r.mask` command (note that the mask
+         will be created only inside compuitational region), or simple
+         define by :option:`mask` option of :grasscmd:`v.surf.rst`.
 
          .. code-block:: bash
 
-            v.hull input=pr_TANV37_5g output=mask_37 -f
-            r.mask vector=mask_37
+            v.hull input=pr_TANV37_5g output=mask37 -f
+            r.mask vector=mask37
                    
+.. figure:: images/dem3d.png
 
-         
+   Example of vizualization in 3D, drapped orthophoto on created DEM.
+
 Visualize point density in 3D
 -----------------------------
 

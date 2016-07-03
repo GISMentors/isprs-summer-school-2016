@@ -6,6 +6,8 @@
    :width: 1.5em
 .. |addmulti| image:: ../_build/html/_static/icons/grass/layer-open.png
    :width: 1.5em
+.. |dbmgr| image:: ../_build/html/_static/icons/grass/table.png
+   :width: 1.5em
 
            
 GRASS GIS
@@ -264,7 +266,19 @@ ekvivalent command for console would be:
           automated by :grasscmd:`Graphical Modeler <g.gui.gmodeler>`
           or by scriping in Python, see :doc:`Lesson 3
           <../lesson3/index>` for details.
-          
+
+          Perfoming NULL propagation can introduce holes into
+          image. One of solutions would be to create RGB composition
+          using :grasscmd:`r.composite` and fill holes with
+          combination of :grasscmd:`r.neighbors` (method=mode) and
+          :grasscmd:`r.mapcalc`, example bellow.
+
+          .. code-block:: bash
+
+             r.neighbors input=TANV37 output=TANV37_mode method=mode
+             r.mapcalc expression="TANV37_final = if ( isnull( TANV37.1 + TANV37.2 + TANV37.3, TANV37_mode, TANV37 )"
+             r.colors map=TANV37_final raster=TANV37
+
 .. figure:: images/data-vizualization-null.png
    :class: large
         
