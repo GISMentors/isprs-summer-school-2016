@@ -273,13 +273,20 @@ ekvivalent command for console would be:
 Working with vector attributes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. todo:: v.extract
+Tool for browsing and mofifying attribute data of vector features is accessible from the layer contextual menu *Attribute data* or from the toolbar |dbmgr|.
 
-.. code-block:: bash
+.. figure:: images/dbmgr.png
 
-   v.extract input=cities where="nazev = 'Harrachov'" output=harrachov
-   v.extract input=cities where="nazev = 'Telč'" output=telc
+   Example of selecting city Harrachov.
 
+.. note:: One of GRASS mottos is "Everything what is possible to
+          perform using GUI is possible to reproduce in command
+          line". For example the operation presented above can be
+          reproduced by :grasscmd:`v.extract` command.
+
+          .. code-block:: bash
+
+             v.extract input=cities where="nazev = 'Harrachov'" output=harrachov
                 
 QGIS Plugin
 -----------
