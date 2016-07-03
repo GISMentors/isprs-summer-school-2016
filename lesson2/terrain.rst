@@ -56,11 +56,47 @@ computed by :grasscmd:`r.param.scale`. Example:
 Landform identification
 -----------------------
 
-.. todo:: r.geomorphon
+Landforms (ridge, valley, ...) can be obtained from curvatures
+computed by :grasscmd:`r.param.scale` (:option:`method=feature`). The
+modern method based multiscale line-of-sight approach is implemented
+by *r.geomorphon* addon.
 
+.. note:: Addons are not part of GRASS distribution and can be
+          installed from menu :menuselection:`Settings --> Addons
+          extensions --> Install extension from addons` or by
+          :grasscmd:`g.extension` command.
+
+Example:
+
+.. code-block:: bash
+
+   r.geomorphon elevation=dem37 forms=landforms37 search=16 skip=6
+                    
+.. figure:: images/landsform-3d.png
+
+   Landsform vizualization in 3D.
+          
 Solar radiation and shades
 --------------------------
 
+Based on slope and aspect maps can be computed solar irradiation
+(daily radiation sum in Wh/m2.day) for a given day using
+:grasscmd:`r.sun`:
+
+.. code-block:: bash
+                          
+   r.sun elevation=dem37 slope=slope37 aspect=aspect37 beam_rad=beam37 step=1 day=doy
+   r.colors -e map=beam37 color=grey
+                
+Than we can also compute solar irradiance (W/m2) for a given day and
+hour (in local solar time) and extract the shades cast by topography:
+
+.. code-block:: bash
+
+   r.sun elevation=dem37 slope=slope37 aspect=aspect37 beam_rad=beam37_8 day=doy time=8
+   r.mapcalc expression="shade37 = if(beam == 0, 0, 1)"
+   r.colors -e map=beam37 color=grey
+   
 Visibility analysis
 -------------------
 
