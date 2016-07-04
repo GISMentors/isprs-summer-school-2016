@@ -21,7 +21,8 @@ geospatial data. 3 most used standards are
 * OGC WFS - Web Feature Service
 * OGC WCS - Web Coverage Service
 
-.. toc::
+.. toctree::
+
     wms.rst
     wfs.rst
     wcs.rst
