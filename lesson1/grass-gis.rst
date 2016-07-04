@@ -23,7 +23,7 @@ GRASS DataBase Structure
 
 The GRASS database structure contains three levels:
 
-#. **DataBase** which a directory on local or network disc which contais
+#. **DataBase** is a directory on local or network disc which contains
    all data accessed by GRASS. It's usually directory called
    "grassdata" located in user's home directory.
 
@@ -228,7 +228,7 @@ RGB composition can be added from Layer Manager toolbar |addrgb|.
 Accessing GRASS Modules
 -----------------------
 
-GRASS is modular system which consists of several hundrends tools
+GRASS is modular system which consists of several hundreds tools
 (called "modules"). They are accessible from the Layer Manager menu,
 "Modules" tab and from command prompt ("Console" tab).
 
@@ -262,7 +262,7 @@ ekvivalent command for console would be:
              Set computational region from RGB composition.
 
           Also note that all three raster maps in composition should
-          be mofified by :grasscmd:`r.null`. This operation can be
+          be modified by :grasscmd:`r.null`. This operation can be
           automated by :grasscmd:`Graphical Modeler <g.gui.gmodeler>`
           or by scriping in Python, see :doc:`Lesson 3
           <../lesson3/index>` for details.
@@ -287,7 +287,7 @@ ekvivalent command for console would be:
 Working with vector attributes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Tool for browsing and mofifying attribute data of vector features is accessible from the layer contextual menu *Attribute data* or from the toolbar |dbmgr|.
+Tool for browsing and modifying attribute data of vector features is accessible from the layer contextual menu *Attribute data* or from the toolbar |dbmgr|.
 
 .. figure:: images/dbmgr.png
 

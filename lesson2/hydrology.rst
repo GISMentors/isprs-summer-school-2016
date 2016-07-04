@@ -4,7 +4,7 @@ Hydrology
 Flooding
 --------
 
-Flooding can be easely simulated by :grasscmd:`r.lake` module which
+Flooding can be easily simulated by :grasscmd:`r.lake` module which
 fills a lake to a target water level from a given start point or seed
 raster. The resulting raster map contains cells with values
 representing lake depth (NULL for all other cells beyond the lake).

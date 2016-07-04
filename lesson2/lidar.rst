@@ -40,12 +40,12 @@ Example:
           import process will be significantly faster.
 
           In the case of :grasscmd:`r.in.lidar` is also used flag
-          :option:`-e` which extends current computation region to
+          :option:`-e` which extends current computational region to
           cover all imported points. Otherwise user needs to set up
-          computation region via :grasscmd:`g.region` as in the case
+          computational region via :grasscmd:`g.region` as in the case
           of :grasscmd:`r.in.xyz`, see section bellow. Spatial
           resolution for output raster map is defined by
-          :option:`resolution` option. Note that computation region is
+          :option:`resolution` option. Note that computational region is
           ignored when importing data using :grasscmd:`v.in.lidar`.
 
 Basic metadata about imported created raster maps
@@ -116,7 +116,7 @@ The input files are classified to the classes bellow:
 #. building (postfix ``_b``)
 
 First we import the input files (output resolution will be define by
-:option:`resolution` regardless computation region settings):
+:option:`resolution` regardless computational region settings):
 
 .. code-block:: bash
 
@@ -185,7 +185,7 @@ We can also check the point overall point density using
 We will interpolate (:grasscmd:`v.surf.rst` using regularized spline
 with tension approximation) with resolution 0.5 meter, also create
 slope and profile curvature map. Since the interpolation process can
-be very slope we will perform the computation on smaller area.
+be very slow we will perform the computation on smaller area.
 
 .. code-block:: bash
 

@@ -1,7 +1,7 @@
 FOSS for Geospatial
 ===================
 
-There are hundereds of FOSS GIS projects available online, see
+There are hundreds of FOSS GIS projects available online, see
 historic overview at http://freegis.org. Some of them are very mature,
 other are less mature or even dead projects. It's hard to find in such
 number of project relevant information which would help you to choose
