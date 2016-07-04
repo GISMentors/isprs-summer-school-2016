@@ -90,3 +90,7 @@ variable. In our case:
    Modification of :option:`expression` (:grasscmd:`r.mapcalc`).
 
 Model to download: `lake3.gxm <../_static/models/lake3.gxm>`_
+
+.. figure:: images/lake_990_995.png
+
+   Comparision of water levels 990 and 995 (:grasscmd:`g.gui.mapswipe`).
