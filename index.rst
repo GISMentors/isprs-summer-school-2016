@@ -18,12 +18,6 @@ Lessons
    lesson4/index
    lesson5/index
    lesson6/index
-   publication/introduction/index
-   publication/ows/index
-   publication/raster/index
-   publication/vector/index
-   publication/mapserver/index
-   publication/client/index
 
 Timetable
 =========
