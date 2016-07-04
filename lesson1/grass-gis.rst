@@ -1,12 +1,12 @@
-.. |addraster| image:: ../_build/html/_static/icons/grass/layer-raster-add.png
+.. |addraster| image:: ../_static/icons/grass/layer-raster-add.png
    :width: 1.5em
-.. |addvector| image:: ../_build/html/_static/icons/grass/layer-vector-add.png
+.. |addvector| image:: ../_static/icons/grass/layer-vector-add.png
    :width: 1.5em
-.. |addrgb| image:: ../_build/html/_static/icons/grass/layer-raster-more.png
+.. |addrgb| image:: ../_static/icons/grass/layer-raster-more.png
    :width: 1.5em
-.. |addmulti| image:: ../_build/html/_static/icons/grass/layer-open.png
+.. |addmulti| image:: ../_static/icons/grass/layer-open.png
    :width: 1.5em
-.. |dbmgr| image:: ../_build/html/_static/icons/grass/table.png
+.. |dbmgr| image:: ../_static/icons/grass/table.png
    :width: 1.5em
 
            

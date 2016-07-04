@@ -1,2 +1,37 @@
+.. |pythoneditor| image:: ../_static/icons/grass/python.png
+   :width: 1.5em
+.. |script| image:: ../_static/icons/grass/script-load.png
+   :width: 1.5em               
+                   
 Python scripting for GRASS
 ==========================
+
+Instead of creating our first Python script for GRASS from scratch we
+will use model created in :doc:`previous section <modeler>`. The
+Graphic Modeler allows on-the-fly conversion to simple Python script
+(tab *Python editor*).
+
+.. figure:: images/modeler-python.png
+
+   Model as Python script.
+
+We save this script to a new file by *Save as* button. This script can
+be launched from menu :menuselection:`File --> Launch script` or from
+the toolbar |script|.
+
+
+Afterwards we will open this file in GRASS Python editor or in your
+favourite editor. GRASS Python editor can be launched from Layer
+Manager (tab *Python*, button *Simple editor*) or from the main
+toolbar |pythoneditor|.
+
+.. figure:: images/lmgr-python-editor.png
+
+   Launching GRASS Python editor from Layer Manager.
+
+In this editor we open our Python script and will start modifying
+it. Our goal will be script capable to run flooding analysis multiple
+times based on *start* and *end* water level and *step* value.
+
+..    
+
