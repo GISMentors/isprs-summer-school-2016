@@ -7,7 +7,6 @@ Geospatial processing workflow
 
    modeler
    pyscripting
-   pygrass
 
 **Useful Links**
 
