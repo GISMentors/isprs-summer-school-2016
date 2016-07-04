@@ -52,4 +52,9 @@ Example of resultant script to download: `lake.py
 Real stuff: DEM from Lidar data
 ----------------------------------------
 
-.. todo:: to be implemented
+Script to download: `isprs.py
+<../_static/scripts/isprs.py>`_
+
+.. literalinclude:: ../_static/scripts/isprs.py
+   :language: python
+
