@@ -8,6 +8,9 @@ modules) can be wrapped into one process (ie. model). So it's easier
 to execute the model later with slightly different inputs or
 parameters.
 
+Flooding Model Example
+----------------------
+
 In our example will be create model to simulate flooding using
 :grasscmd:`r.lake` (see :doc:`Lesson 2 <../lesson2/hydrology>`). The
 model will also print flooded area in hectares (:grasscmd:`r.report`)
