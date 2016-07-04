@@ -275,8 +275,9 @@ ekvivalent command for console would be:
 
           .. code-block:: bash
 
+             r.composite red=TANV37.1 green=TANV37.2 blue=TANV37.3 output=TANV37
              r.neighbors input=TANV37 output=TANV37_mode method=mode
-             r.mapcalc expression="TANV37_final = if ( isnull( TANV37.1 + TANV37.2 + TANV37.3, TANV37_mode, TANV37 )"
+             r.mapcalc expression="TANV37_final = if ( isnull( TANV37.1 + TANV37.2 + TANV37.3 ), TANV37_mode, TANV37 )"
              r.colors map=TANV37_final raster=TANV37
 
 .. figure:: images/data-vizualization-null.png
