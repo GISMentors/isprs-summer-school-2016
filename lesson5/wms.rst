@@ -38,27 +38,113 @@ WMS Server should be able to handle 3 types of requests:
 * GetFeatureInfo - allows the client ask for attribute data identified by "mouse
   click" - single point
 
-How to publish WMS data using QGIS
+QGIS project deploying
+----------------------
+
+#. Open `Project properties` dialog and go to `OWS Server` tab
+
+   .. figure:: images/09_ows.png
+
+#. Click `Service capabilities` checkbox and fill needed items
+
+   .. figure:: images/10_publishing.png
+
+        Fill short name, title, organisation, ... 
+
+        WMS Capabilities: click `Use Current Canvas Extent`
+
+        Add supported CRSs
+
+#. `Select all` vector layers for OGC WFS and raster layers for OGC WCS services
+
+    .. figure:: images/11_publishing.png
+
+        Enable WFS and WCS layers, you can limit image size for WMS too
+
+#. `Launch` test configuration
+
+    .. figure:: images/12_publishing.png
+
+        Launch test configuration
+
+#. Save the project as file *next to the `publication-data` directory*
+
+#. Copy `publication-data` along with the QGIS project file to
+   `/mnt/publish/YOUR_NAME/` directory
+
+    .. figure:: images/16_copy.png
+
+
+#. Let's open our created QGIS project with raster and vector data!
+
+.. Parameter MAP, otherwise standard WMS request
+    http://localhost/cgi-bin/qgis_mapserv.fcgi?MAP=/home/jachym/Data/isprs/ISPRS%20Summer%20School%20workshop.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+
+#. In our case, the OGC OWS server is living in GIS.Lab server instance
+
+
+    http://gislab:91/cgi-bin/qgis_mapserv.fcgi
+
+#. We have to point the `qgis_mapserver.fcgi` program to our project - we have to
+    add `map` parameter to the url 
+
+
+    `map=cepicky/ISPRS_summerschool_ospublication.qgs`
+    
+#. Now we can ask for metadata from the server::
+
+            service=wms
+            request=getcapabilities
+     
+
+   Each request parameter is to be separated in form::
+
+            key=value
+
+   Parameters are separated using `&` sign
+
+   All parameters are separated from the file name using `?` sign::
+
+            http://gislab:91/cgi-bin/qgis_mapserv.fcgi?
+            map=cepicky/ISPRS_summerschool_ospublication.qgs&
+            service=wms&
+            request=getcapabilities
+
+   Putting it to one line
+
+    http://gislab:91/cgi-bin/qgis_mapserv.fcgi?map=cepicky/ISPRS_summerschool_ospublication.qgs&service=wms&request=getcapabilities
+
+#. Now we can get the map
+
+   http://gislab:91/cgi-bin/qgis_mapserv.fcgi?map=cepicky/ISPRS_summerschool_ospublication.qgs&service=WMS&request=getmap&width=800&height=600&crs=epsg:32633&layers=Hydrology&format=image/png&bbox=527542,5.44521e+06,539858,5.45313e+06 
+
+   .. figure:: images/17_getmap.png
+
+
+What have we done?
+------------------
+
+.. figure:: images/deploying.png
+
+    Deploying of the project
+
+Load Published WMS service to QGIS
 ----------------------------------
 
-Let's create some QGIS project with raster and vector data!
+#. In QGIS, you can now add new WMS server
 
-1. - otevřít qgis
-2. - nastavit projekt
-3. - nahrát ortofota
-4. - nahrát vektorovou vrstvu
-5. - nastylovat vrstvu
-6. - publikovat wms
-7. - nahrát projekt
-8. - testování projektu, WMS
+    .. figure:: images/13_wms_client.png
 
-Parameter MAP, otherwise standard WMS request
-http://localhost/cgi-bin/qgis_mapserv.fcgi?MAP=/home/jachym/Data/isprs/ISPRS%20Summer%20School%20workshop.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
+     Add new `WMS layer - New server` with URL http://gislab:91/cgi-bin/qgis_mapserv.fcgi?map=cepicky/ISPRS_summerschool_ospublication.qgs
 
-GetMap
+     And leave the rest
 
-Pro QGIS použít dlaždicování - nebo zvětšit max. velikost obrázku
+#. `Connect` to the server and select some layer, choose `PNG` image format,
+   create name
 
+    .. figure:: images/14_wms_addlayer.png
 
-
+#. You now may have new raster layer, published from our WMS server
+    
+   .. figure:: images/deploying.png
 
