@@ -23,6 +23,8 @@ geospatial data. 3 most used standards are
 
 .. toctree::
 
+    qgis_project.rst
     wms.rst
     wfs.rst
     wcs.rst
+

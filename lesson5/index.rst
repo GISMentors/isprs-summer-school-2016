@@ -1,6 +1,6 @@
-**************
-Publication I.
-**************
+***************************************************
+Publication of spatial data using open source tools
+***************************************************
 
 Motivation for publishing spatial data
 ======================================
@@ -30,3 +30,7 @@ Components
     be used too.
 
 
+.. toctree::
+   :maxdepth: 3
+
+   ows
