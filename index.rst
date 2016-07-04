@@ -49,17 +49,13 @@ Timetable
 +-----------+----------------------------------+---------+
 | Day 10.7. | Topic                            | Lector  |
 +===========+==================================+=========+
-| Lesson 1  | Introduction                     | Jáchym  |
+| Lesson 1  | Publication I.                   | Jáchym  |
 +-----------+----------------------------------+---------+
-| Lesson 2  | Open Web Services                | Jáchym  |
+| Lesson 2  | Publication II.                  | Jáchym  |
 +-----------+----------------------------------+---------+
-| Lesson 3  | Publication of raster data       | Jáchym  |
+| Lesson 3  |                                  |         |
 +-----------+----------------------------------+---------+
-| Lesson 4  | Publication of vector data       | Jáchym  |
-+-----------+----------------------------------+---------+
-| Lesson 5  | Web Server programms             | Jáchym  |
-+-----------+----------------------------------+---------+
-| Lesson 6  | Building client Web mapping app. | Jáchym  |
+| Lesson 4  |                                  |         |
 +-----------+----------------------------------+---------+
 
 **Group II.**
