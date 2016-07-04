@@ -165,7 +165,7 @@ Time series can be vizualized by specialized tool
 Other interesting tool is :grasscmd:`g.gui.animation` which allows us
 creating animations. Example:
 
-.. code-block::
+.. code-block:: bash
 
    g.gui.animation strds=lakes37
 
