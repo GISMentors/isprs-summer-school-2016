@@ -1,8 +1,8 @@
 Hydrology
 =========
 
-Flooding
---------
+Flooding Simulation
+-------------------
 
 Flooding can be easily simulated by :grasscmd:`r.lake` module which
 fills a lake to a target water level from a given start point or seed
