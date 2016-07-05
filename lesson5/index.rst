@@ -2,6 +2,8 @@
 Publication of spatial data using open source tools
 ***************************************************
 
+.. warning:: In progress...
+             
 Motivation for publishing spatial data
 ======================================
 
