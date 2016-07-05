@@ -2,7 +2,7 @@
 Introduction
 ************
 
-The training materials are focused on Free and Open Source GIS
+The training materials are focused on *Free and Open Source GIS*
 technologies. `GIS.lab <http://web.gislab.io>`_ free geospatial
 infrastructure is proudly used as a training platform.
 

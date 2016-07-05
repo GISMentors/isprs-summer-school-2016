@@ -32,35 +32,33 @@ The GRASS database structure contains three levels:
    have the same spatial coordinate system. Location also defines
    default computational region.
 
-#. **Mapset** is a subdirectory in a location. It helps to organize maps
-   into logical groups or helps to separate parallel work of more users
+#. **Mapset** is a subdirectory in a location. It helps to organize
+   maps into logical groups or to separate parallel work of more users
    on the same project (within one location).
 
-When you start GRASS you must to defined all these three items, see
+When starting GRASS you must to define all these three items, see
 figure bellow.
 
 .. figure:: images/welcome-screen.png
 
    GRASS startup screen to choose database, location, and mapset.
             
-The user have write access only to the current mapset, but she/he can
-access also maps from other mapset within one location, see figure
-bellow. The list of visible mapsets can be modified in menu
-:menuselection:`Settings --> GRASS working environment --> Mapset
-access`.
+The user have write permission only to the current mapset, maps from
+other mapsets within one location can be read without restrictions (if
+not defined on OS level), see figure bellow. The list of visible
+mapsets can be modified in menu :menuselection:`Settings --> GRASS
+working environment --> Mapset access`.
 
 .. figure:: images/mapset-access.png
    :class: small
         
    Dialog for modifying mapset search path.
    
-The access to maps from other locations requires to reproject a
-selected map by :grasscmd:`r.proj` (raster maps) or :grasscmd:`v.proj`
-(vector maps). GRASS doesn't support so-called
-reprojection-on-the-fly.
+Accessing maps from other locations requires to reproject selected map
+by :grasscmd:`r.proj` (raster maps) or :grasscmd:`v.proj` (vector
+maps). GRASS doesn't support so-called reprojection-on-the-fly.
 
-.. notecmd:: GRASS can be started also from command line specifying
-             full path to the mapset.
+.. notecmd:: GRASS can be started specifying full path to the mapset
 
    .. code-block:: bash
 

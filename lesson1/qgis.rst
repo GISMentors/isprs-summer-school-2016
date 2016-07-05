@@ -8,5 +8,6 @@ that provides data viewing, editing, and analysis.
 See `project website <http://www.qgis.org>`_ for details.
 
 .. figure:: images/qgis.png
-
+   :class: middle
+        
    QGIS in action.

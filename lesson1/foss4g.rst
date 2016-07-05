@@ -4,8 +4,8 @@ FOSS for Geospatial
 There are hundreds of FOSS GIS projects available online, see
 historic overview at http://freegis.org. Some of them are very mature,
 other are less mature or even dead projects. It's hard to find in such
-number of project relevant information which would help you to choose
-relevant software for your task.
+number of projects relevant information which would help you to choose
+suitable software for your task.
 
 Since 2006 there is `OSGeo Foundation <http://www.osgeo.org>`_ to
 support the collaborative development of open source geospatial
@@ -16,8 +16,8 @@ software, and promote its widespread use.
    
    OSGeo logo (`source <https://wiki.osgeo.org/wiki/Logo>`__).
 
-The foundation has adopted principles to ensure that projects called
-OSGeo project will satisfied basic quality requirements, namely:
+The foundation has adopted principles to ensure that projects under
+OSGeo umbrella will satisfy basic quality requirements, namely:
 
 * Projects should manage themselves, striving for consensus and
   encouraging participation from all contributors - from beginning
@@ -96,8 +96,8 @@ Outreach Projects
 *    `Education and Curriculum <http://www.osgeo.org/education>`_
 *    `OSGeo Live <http://live.osgeo.org/>`_
 
-Software used for training
---------------------------
+Software used in this training materials
+----------------------------------------
 
 * `GRASS GIS <http://grass.osgeo.org>`_ for geospatial (raster,
   imagery, vector) data processing and providing spatial analysis.
