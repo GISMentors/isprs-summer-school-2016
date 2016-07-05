@@ -217,8 +217,4 @@ be very slow we will perform the computation on smaller area.
 
    Example of visualization in 3D, draped orthophoto on created DEM.
 
-..
-   
-   Visualize point density in 3D
-   -----------------------------
    
