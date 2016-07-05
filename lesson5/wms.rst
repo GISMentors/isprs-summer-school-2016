@@ -38,8 +38,8 @@ WMS Server should be able to handle 3 types of requests:
 * GetFeatureInfo - allows the client ask for attribute data identified by "mouse
   click" - single point
 
-QGIS project deploying
-----------------------
+QGIS project deployment
+-----------------------
 
 #. Open `Project properties` dialog and go to `OWS Server` tab
 
@@ -130,6 +130,9 @@ What have we done?
 
 Load Published WMS service to QGIS
 ----------------------------------
+
+.. note:: It's is wort to start new fresh empty QGIS project for this step for
+        not getting confused with the layers you may have in the layerswitcher
 
 #. In QGIS, you can now add new WMS server
 

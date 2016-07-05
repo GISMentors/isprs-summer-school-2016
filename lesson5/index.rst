@@ -17,7 +17,7 @@ Motivation for publishing spatial data
 Components
 ==========
 
-* Server
+* **Server**
 * Client
 
 ---
@@ -36,3 +36,4 @@ Components
    :maxdepth: 3
 
    ows
+   servers
