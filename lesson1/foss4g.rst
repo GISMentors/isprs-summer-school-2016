@@ -99,8 +99,6 @@ Outreach Projects
 Software used for training
 --------------------------
 
-.. todo:: doplnit
-          
 * `GRASS GIS <http://grass.osgeo.org>`_ for geospatial (raster,
   imagery, vector) data processing and providing spatial analysis.
 * `QGIS desktop <http://qgis.org>`_ for geospatial vizualization,
@@ -109,4 +107,7 @@ Software used for training
   providing OGC Web Services.
 * `GDAL library <http://gdal.org>`_ for reading and writing various
   geospatial data (GeoTIFF, JPEG, Shapefile, GML, ...).
-* ...
+* `libLAS library <http://liblas.org>`_ for reading Lidar data in LAS
+  format.
+* `laszip library <http://www.laszip.org>`_ for reading compressed LAZ
+  format.

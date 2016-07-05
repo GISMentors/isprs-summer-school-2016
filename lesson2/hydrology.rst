@@ -49,17 +49,15 @@ statistics using :grasscmd:`r.stats.zonal`:
 
    Average slope value of each watershed.
 
-.. todo:: examplain -a flag
+.. todo:: Exaplain -a flag
 
-Depression filling
-------------------
+.. 
 
-.. todo:: r.fill.dir (?)
-          
-Overland water flow simulation
-------------------------------
+    Depression filling
+    ------------------
 
-.. todo:: r.sim.water (?)
+    Overland water flow simulation
+    ------------------------------
 
 Erosion modeling
 ----------------   

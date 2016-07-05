@@ -306,4 +306,12 @@ Tool for browsing and modifying attribute data of vector features is accessible 
 QGIS Plugin
 -----------
 
-.. todo:: ?
+GRASS plugin enables QGIS to access raster and vector data in GRASS
+format, to display them, browse, and modify including topological
+editing. The plugin also allows launching GRASS tools (modules)
+directly from QGIS user interface.
+
+.. note:: We highly recommend QGIS 2.14 or higher (this version of
+          QGIS is the first which comes with GRASS 7).
+
+.. todo:: add screenshot

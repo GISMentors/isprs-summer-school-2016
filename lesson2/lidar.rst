@@ -217,10 +217,8 @@ be very slow we will perform the computation on smaller area.
 
    Example of vizualization in 3D, drapped orthophoto on created DEM.
 
-Visualize point density in 3D
------------------------------
-
-.. todo:: ?
-
-   http://ncsu-osgeorel.github.io/uav-lidar-analytics-course/assignments/lidar.html
+..
+   
+   Visualize point density in 3D
+   -----------------------------
    

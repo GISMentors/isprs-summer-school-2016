@@ -47,9 +47,9 @@ Timetable
 +-----------+----------------------------------+---------+
 | Lesson 2  | Publication II.                  | Jáchym  |
 +-----------+----------------------------------+---------+
-| Lesson 3  |                                  |         |
+| Lesson 3  | ---                              | ---     |
 +-----------+----------------------------------+---------+
-| Lesson 4  |                                  |         |
+| Lesson 4  | ---                              | ---     |
 +-----------+----------------------------------+---------+
 
 **Group II.**
@@ -73,9 +73,9 @@ Timetable
 +-----------+----------------------------------+---------+
 | Day 10.7. | Topic                            | Lector  |
 +===========+==================================+=========+
-| Lesson 1  |                                  |         |
+| Lesson 1  | ---                              | ---     |
 +-----------+----------------------------------+---------+
-| Lesson 2  |                                  |         |
+| Lesson 2  | ---                              | ---     |
 +-----------+----------------------------------+---------+
 | Lesson 3  | Publication I.                   | Jáchym  |
 +-----------+----------------------------------+---------+
@@ -89,6 +89,6 @@ Lectors
   <http://isprs2016-prague.com/img/documents/download/ABSTRACT-MARTIN_LANDA.pdf>`_
 * `Jáchym Čepicky <http://isprs2016-prague.com/img/documents/download/ABSTRACT-JACHYM_CEPICKY.pdf>`_
 
-Proudly provided by `GISMentors <http://www.gismentor.eu>`_ training
+Proudly provided by `GISMentors <http://www.gismentors.eu>`_ training
 and mentoring group.
     

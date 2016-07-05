@@ -72,5 +72,5 @@ html_favicon = "images/favicon.ico"
 from conf_base import *
 
 todo_include_todos = True
-html_use_index = True
+html_use_index = False
 language = 'en'
