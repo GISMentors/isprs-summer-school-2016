@@ -58,7 +58,7 @@ Accessing maps from other locations requires to reproject selected map
 by :grasscmd:`r.proj` (raster maps) or :grasscmd:`v.proj` (vector
 maps). GRASS doesn't support so-called reprojection-on-the-fly.
 
-.. notecmd:: GRASS can be started specifying full path to the mapset
+.. notecmd:: GRASS can be started by specifying full path to the mapset
 
    .. code-block:: bash
 
@@ -67,7 +67,7 @@ maps). GRASS doesn't support so-called reprojection-on-the-fly.
 Creating new location
 ^^^^^^^^^^^^^^^^^^^^^
 
-You can create new location when starting GRASS or from running
+You can create new location when starting GRASS, or from running
 session in the menu :menuselection:`Settings --> GRASS working
 environment --> Create new location`.
 
@@ -110,7 +110,7 @@ Import vector data
 
 Dialog for importing vector data is accessible from menu
 :menuselection:`File --> Import vector data --> Common import
-formats`, from the main toolbar, or from command line as
+formats`, from the main toolbar, or from command line using
 :grasscmd:`v.import` module.
 
 .. figure:: images/import-vector-toolbar.png
@@ -143,7 +143,7 @@ Import raster data
 
 Raster data is possible to import from the menu :menuselection:`File
 --> Import raster data --> Common import formats`, from the main
-toolbar, or from command line as :grasscmd:`r.import` module.
+toolbar, or from command line using :grasscmd:`r.import` module.
 
 .. figure:: images/import-raster-toolbar.png
 
@@ -151,8 +151,8 @@ toolbar, or from command line as :grasscmd:`r.import` module.
 
 .. figure:: images/import-raster.png
 
-   Example of importing raster files in JPG format from
-   directory. Since raster files lacks spatial reference information
+   Example of importing raster files in GeoTIFF format from
+   directory. Since raster files lack spatial reference information
    (project doesn't match) we will force overriding project check
    (:menuselection:`Import settings --> Optional --> Override
    projection check`).
@@ -161,7 +161,7 @@ toolbar, or from command line as :grasscmd:`r.import` module.
                   raster data using :grasscmd:`r.external` (*Link
                   external raster data*).
 
-.. note:: GRASS import raster bands as separate raster maps. Raster
+.. note:: GRASS imports raster bands as separate raster maps. Raster
           maps are represented by regular grid. Three different types
           are supported:
 
@@ -172,7 +172,7 @@ toolbar, or from command line as :grasscmd:`r.import` module.
 Working with GUI
 ----------------
 
-GRASS GUI consists two main windows:
+GRASS GUI consists of two main windows:
 
 * Layer Manager :fignote:`(1.)`
 * Map Display (user can run multiple Map Display windows) :fignote:`(2.)`
@@ -182,22 +182,22 @@ GRASS GUI consists two main windows:
         
    Layer Manager and Map Display GUI components.
 
-Vector maps can be added similarly to raster from :menuselection:`File
---> Map display --> Add vector` or from the Layer Manager toolbar
+Vector maps can be added similarly to rasters from :menuselection:`File
+--> Map display --> Add vector`, or from the Layer Manager toolbar
 |addvector|.
 
 .. figure:: images/d-vect.png
 
-   Dialog (:grasscmd:`d.rast`) for displaying vector data in the Map
+   Dialog (:grasscmd:`d.vect`) for displaying vector data in the Map
    Display.
 
 Raster maps can be added to layer tree from menu :menuselection:`File
---> Map display --> Add raster` or from the Layer Manager toolbar
+--> Map display --> Add raster`, or from the Layer Manager toolbar
 |addraster|.
 
 .. figure:: images/d-rast.png
 
-   Dialog (:grasscmd:`d.vect`) for displaying raster data in the Map
+   Dialog (:grasscmd:`d.rast`) for displaying raster data in the Map
    Display.
 
 RGB orthophotos has been spitted by GRASS into three separate raster
@@ -207,14 +207,15 @@ maps:
 * green channel (``.2``)
 * blue channel (``.3``)
 
-You can multiple raster or vector maps from Layer Manager toolbar |addmulti|.
+You can also add multiple raster or vector maps from Layer Manager
+toolbar by |addmulti|.
 
 .. figure:: images/add-raster-multi.png
    :class: small
         
    Add multiple raster maps to layer tree.
   
-RGB composition can be added from Layer Manager toolbar |addrgb|.
+RGB composition can be added from Layer Manager toolbar by |addrgb|.
 
 .. figure:: images/add-rgb.png
 
@@ -234,7 +235,7 @@ Accessing GRASS Modules
 
 GRASS is modular system which consists of several hundreds tools
 (called "modules"). They are accessible from the Layer Manager menu,
-"Modules" tab and from command prompt ("Console" tab).
+"Modules" tab, and from command prompt ("Console" tab).
 
 .. figure:: images/modules-tab.png
 
@@ -244,8 +245,8 @@ GRASS is modular system which consists of several hundreds tools
 
    Launching module from Layer Manager console.
 
-The commands (modules) can be called from GUI dialogs and command
-line. Figure bellow shows calling :grasscmd:`r.null` module. The
+The commands (modules) can be called from GUI dialogs and from command
+line. Figure bellow shows GUI dialog of :grasscmd:`r.null` module. The
 equivalent command for console would be:
 
 .. code-block:: bash
@@ -258,7 +259,7 @@ equivalent command for console would be:
 
 .. note:: This command replaces in raster maps occurrence of 0 a 255
           values by NULL value (no-data). Note that before running
-          this command you need to set up computational region based
+          this command you need to set up **computational region** based
           on selected raster map (:grasscmd:`g.region`).
 
           .. figure:: images/set-region-rgb.png
@@ -292,7 +293,9 @@ equivalent command for console would be:
 Working with vector attributes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Tool for browsing and modifying attribute data of vector features is accessible from the layer contextual menu *Attribute data* or from the toolbar |dbmgr|.
+Tool for browsing and modifying attribute data of vector features is
+accessible from the layer contextual menu *Attribute data* or from the
+Layer Manager toolbar |dbmgr|.
 
 .. figure:: images/dbmgr.png
 
@@ -315,9 +318,11 @@ format, to display them, browse, and modify including topological
 editing. The plugin also allows launching GRASS tools (modules)
 directly from QGIS user interface.
 
-.. note:: We highly recommend QGIS 2.14 or higher (this version of
-          QGIS is the first which comes with GRASS 7).
+.. note:: We highly recommend QGIS version 2.14 or higher (this
+          version of QGIS is the first which comes with GRASS 7
+          included).
 
 .. figure:: images/qgis-grass.png
-
+   :class: middle
+   
    QGIS GRASS plugin in action.

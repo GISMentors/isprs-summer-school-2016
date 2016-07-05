@@ -20,7 +20,7 @@ Example:
    Flooding visualization.
       
 .. note:: See also related *r.lake.series* addon, details in
-          :doc:`lesson 4 <../lesson4/index>`.
+          :doc:`Lesson 4 <../lesson4/index>`.
           
 Flow accumulation and watersheds
 --------------------------------
@@ -37,7 +37,7 @@ Watersheds and flow accumulation can be derived by
    Flow accumulation map with legend.
 
 For compute average slope value for each watershed can be used zonal
-statistics using :grasscmd:`r.stats.zonal`:
+statistics performed using :grasscmd:`r.stats.zonal`:
 
 .. code-block:: bash
 
@@ -48,8 +48,6 @@ statistics using :grasscmd:`r.stats.zonal`:
 .. figure:: images/watersheds_slope37.png
 
    Average slope value of each watershed.
-
-.. todo:: Exaplain -a flag
 
 Erosion modeling
 ----------------   

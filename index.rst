@@ -78,8 +78,8 @@ Lecturers
 =========
 
 * `Martin Landa
-  <http://isprs2016-prague.com/img/documents/download/ABSTRACT-MARTIN_LANDA.pdf>`_
-* `Jáchym Čepicky <http://isprs2016-prague.com/img/documents/download/ABSTRACT-JACHYM_CEPICKY.pdf>`_
+  <http://isprs2016-prague.com/img/documents/download/ABSTRACT-MARTIN_LANDA.pdf>`_, Czech Technical University in Prague
+* `Jáchym Čepicky <http://isprs2016-prague.com/img/documents/download/ABSTRACT-JACHYM_CEPICKY.pdf>`_, OpenGeoLabs s.r.o.
 
 Proudly provided by `GISMentors <http://www.gismentors.eu>`_ training
 and mentoring group.

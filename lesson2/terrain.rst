@@ -4,7 +4,7 @@ Modeling topography
 Computing slope and aspect
 --------------------------
 
-Topographic slope and aspect map can be create by
+Topographic slope and aspect map can be created by
 :grasscmd:`r.slope.aspect`.
 
 .. figure:: images/slope-contours-3d.png
@@ -12,7 +12,7 @@ Topographic slope and aspect map can be create by
    Topographic slope map visualized in 3D with clipped contours.
 
 Such map can be classified using :grasscmd:`r.recode` into
-class. Example:
+defined classes. Example:
 
 ::
    
@@ -63,7 +63,7 @@ by *r.geomorphon* addon.
 
 .. note:: Addons are not part of GRASS distribution and can be
           installed from menu :menuselection:`Settings --> Addons
-          extensions --> Install extension from addons` or by
+          extensions --> Install extension from addons`, or by
           :grasscmd:`g.extension` command.
 
 Example:
@@ -90,7 +90,7 @@ Based on slope and aspect maps can be computed solar irradiation
    r.colors -e map=beam37 color=grey
 
 .. noteadvanced:: Computation can be very slow. Check for
-                  parallelization efforts.
+                  paralelization efforts.
              
 Than we can also compute solar irradiance (W/m2) for a given day and
 hour (in local solar time) and extract the shades cast by topography:

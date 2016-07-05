@@ -9,8 +9,8 @@ LAS format
 
 For importing LAS data are available two modules:
 
-* :grasscmd:`r.in.lidar` which create a new raster map
-* :grasscmd:`v.in.lidar` which create a new vector point map
+* :grasscmd:`r.in.lidar` which creates a new raster map
+* :grasscmd:`v.in.lidar` which creates a new vector point map
 
 .. note:: GRASS must be compiled with support for `libLAS
           <http://www.liblas.org>`_ library.
@@ -37,7 +37,8 @@ Example:
              Spatial Reference:           None
 
           Flag :option:`-t` skips creation of attribute table. The
-          import process will be significantly faster.
+          import process will be significantly faster. You can also
+          avoid building topology by :option:`-b` flag.
 
           In the case of :grasscmd:`r.in.lidar` is also used flag
           :option:`-e` which extends current computational region to
@@ -131,7 +132,7 @@ First we import the input files (output resolution will be define by
 
 .. tip:: In the case that input data include classified
          points (can be check by ``lasinfo`` command) you can
-         use :option:`class_filter`` and
+         use :option:`class_filter` and
          :option:`return_filter` of :grasscmd:`r.in.lidar`.
                   
 The composite map can be created by :grasscmd:`r.mapcalc` (note that
@@ -182,10 +183,9 @@ We can also check the point overall point density using
    Estimated point density: 0.6418
    Estimated mean distance between points: 1.248
 
-We will interpolate (:grasscmd:`v.surf.rst` using regularized spline
-with tension approximation) with resolution 0.5 meter, also create
-slope and profile curvature map. Since the interpolation process can
-be very slow we will perform the computation on smaller area.
+DEM will be interpolated (:grasscmd:`v.surf.rst` using regularized
+spline with tension approximation) with resolution 0.5 meter, also
+slope and profile curvature map will be created. 
 
 .. code-block:: bash
 
@@ -195,12 +195,6 @@ be very slow we will perform the computation on smaller area.
 .. tip:: Set higher npmin to reduce artifacts from segmentation
    visible on slope and curvature maps (will be much slower!):
 
-   .. code-block:: bash
-                
-      g.region n=5626866 s=5626530 w=532642 e=533062 res=0.5 -pa
-      
-.. todo:: check speed & set region based on municipality
-                
 .. tip:: It can be also useful to set mask on areas without measured
          data. Convex hull created by :grasscmd:`v.hull` or composed
          orthophoto map can be used for this purpose. The mask can be
@@ -215,6 +209,6 @@ be very slow we will perform the computation on smaller area.
                    
 .. figure:: images/dem3d.png
 
-   Example of visualization in 3D, draped orthophoto on created DEM.
+   Example of visualization in 3D, draped orthophoto over created DEM.
 
    
