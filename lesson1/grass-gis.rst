@@ -314,4 +314,6 @@ directly from QGIS user interface.
 .. note:: We highly recommend QGIS 2.14 or higher (this version of
           QGIS is the first which comes with GRASS 7).
 
-.. todo:: add screenshot
+.. figure:: images/qgis-grass.png
+
+   QGIS GRASS plugin in action.

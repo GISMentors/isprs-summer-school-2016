@@ -51,14 +51,6 @@ statistics using :grasscmd:`r.stats.zonal`:
 
 .. todo:: Exaplain -a flag
 
-.. 
-
-    Depression filling
-    ------------------
-
-    Overland water flow simulation
-    ------------------------------
-
 Erosion modeling
 ----------------   
 
