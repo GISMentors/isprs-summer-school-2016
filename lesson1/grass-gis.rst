@@ -99,6 +99,12 @@ startup screen.
 
    New location accessible via GRASS startup screen.
 
+.. notecmd:: New GRASS location can be also created
+
+   .. code-block:: bash
+
+      grass72 -c EPSG:32633 ~/grassdata/isprs/PERMANENT
+
 Import vector data
 ------------------
 
