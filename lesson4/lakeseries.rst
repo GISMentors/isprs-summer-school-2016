@@ -7,7 +7,7 @@ In this section we extend flooding simulation effort performed by
 <../lesson3/pyscripting>`. Module :grasscmd:`r.lake` itself allows to
 generate only one output raster map within one run. This limitation is
 surpass by addon *r.lake.series* (you can install it by
-:grasscmd:`g.extension`). This modules outputs multiple raster maps
+:grasscmd:`g.extension`). This module outputs multiple raster maps
 registered in time-space dataset.
 
 .. code-block:: bash
@@ -120,7 +120,7 @@ Space-time Data Extracting
 --------------------------
 
 Raster spatial-temporal data can be extract into new datasets using
-:grasscmd:`t.rast.extract`. In the example below will be create three
+:grasscmd:`t.rast.extract`. In the example below will be created three
 new datasets for first, second and third three hours.
 
 .. code-block:: bash

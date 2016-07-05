@@ -11,10 +11,10 @@ parameters.
 Flooding Model Example
 ----------------------
 
-In our example will be create model to simulate flooding using
+In our example will be created a model to simulate flooding using
 :grasscmd:`r.lake` (see :doc:`Lesson 2 <../lesson2/hydrology>`). The
 model will also print flooded area in hectares (:grasscmd:`r.report`)
-and outputs new vector map containing flooded roads
+and output new vector map containing flooded roads
 (:grasscmd:`v.overlay`). This step requires to create vector map of
 flooded area using :grasscmd:`r.recode` and :grasscmd:`r.to.vect`. The
 length of flooded roads can be printed using :grasscmd:`v.to.db`.
@@ -59,9 +59,9 @@ Model to download: `lake2.gxm <../_static/models/lake2.gxm>`_
 Version 3
 ^^^^^^^^^
 
-The model overwrite output data. We will modify the model to create
+The model overwrites output data. We will modify the model to create
 output raster lake map and clipped roads map for each value
-separately. Eg. for water level 990 will create modified model
+separately. Eg. for water level 990 we will create modified model
 *lake_990* and *roads_lake_990*, for level 995 *lake_995* and
 *roads_lake_995*. This modification will be implemented in the modeler
 using variables. Firstly we disable parametrization of
@@ -72,7 +72,7 @@ using variables. Firstly we disable parametrization of
 
    Adding new variable to the model.
 
-Afterwards we must to modify all modules which should use this
+Afterwards we must modify all modules which should use this
 variable. In our case:
 
 * :grasscmd:`r.lake`: :option:`water_level`, :option:`lake`
