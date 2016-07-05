@@ -49,7 +49,7 @@ Example:
           ignored when importing data using :grasscmd:`v.in.lidar`.
 
 Basic metadata about imported created raster maps
-can be optained by :grasscmd:`r.info`, or :grasscmd:`v.info` in the
+can be obtained by :grasscmd:`r.info`, or :grasscmd:`v.info` in the
 case of vector maps.
 
 .. code-block:: bash
@@ -112,7 +112,7 @@ Raster binning and classification
 The input files are classified to the classes bellow:
 
 #. ground (postfix ``_g``)
-#. veggetation (postfix ``_v``)
+#. vegetation (postfix ``_v``)
 #. building (postfix ``_b``)
 
 First we import the input files (output resolution will be define by
@@ -205,7 +205,7 @@ be very slow we will perform the computation on smaller area.
          data. Convex hull created by :grasscmd:`v.hull` or composed
          orthophoto map can be used for this purpose. The mask can be
          specified by :grasscmd:`r.mask` command (note that the mask
-         will be created only inside compuitational region), or simple
+         will be created only inside computational region), or simple
          define by :option:`mask` option of :grasscmd:`v.surf.rst`.
 
          .. code-block:: bash
@@ -215,7 +215,7 @@ be very slow we will perform the computation on smaller area.
                    
 .. figure:: images/dem3d.png
 
-   Example of vizualization in 3D, drapped orthophoto on created DEM.
+   Example of visualization in 3D, draped orthophoto on created DEM.
 
 ..
    

@@ -9,7 +9,7 @@ Topographic slope and aspect map can be create by
 
 .. figure:: images/slope-contours-3d.png
 
-   Topolographic slope map vizualized in 3D with clipped contours.
+   Topographic slope map visualized in 3D with clipped contours.
 
 Such map can be classified using :grasscmd:`r.recode` into
 class. Example:
@@ -74,7 +74,7 @@ Example:
                     
 .. figure:: images/landsform-3d.png
 
-   Landsform vizualization in 3D.
+   Landsform visualization in 3D.
           
 Solar radiation and shades
 --------------------------

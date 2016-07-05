@@ -17,7 +17,7 @@ Example:
 
 .. figure:: images/lake37.png
 
-   Flooding vizualization.
+   Flooding visualization.
       
 .. note:: See also related *r.lake.series* addon, details in
           :doc:`lesson 4 <../lesson4/index>`.

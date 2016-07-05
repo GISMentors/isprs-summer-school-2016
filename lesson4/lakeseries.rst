@@ -93,14 +93,14 @@ Univariate statistic can be calculated by :grasscmd:`t.rast.univar`.
    lakes37_990.5@landa|51|None|7.17042749303603|0.00030517578125|21.1248779296875|...
 
 Data aggregation can be performed by :grasscmd:`t.rast.aggregate`. In
-example below will be data aggregared by 1 hour.
+example below will be data aggregated by 1 hour.
 
 .. code-block:: bash
 
    t.rast.aggregate input=lakes37 output=lakes37_h basename=ag granularity=60 nproc=3
 
 The command generated a new space time dataset which can be used for
-subequent analysis like univarinte statistics:
+subsequent analysis like univariate statistics:
 
 .. code-block:: bash
 
@@ -135,7 +135,7 @@ Aggregation can be done by :grasscmd:`t.rast.series`:
                 
    t.rast.series input=lakes37_1 output=lakes37_1_avg method=average
 
-Let's compute univarite statistics by :grasscmd:`r.univar`:
+Let's compute univariate statistics by :grasscmd:`r.univar`:
 
 .. code-block:: bash
 
@@ -147,10 +147,10 @@ Let's compute univarite statistics by :grasscmd:`r.univar`:
    mean: 6.74251
    ...
                 
-Space-time Data Vizualization
+Space-time Data Visualization
 -----------------------------
 
-Time series can be vizualized by specialized tool
+Time series can be visualized by specialized tool
 :grasscmd:`g.gui.timeline`. Example:
 
 .. code-block:: bash
@@ -159,7 +159,7 @@ Time series can be vizualized by specialized tool
 
 .. figure:: images/timeline.png
 
-   Time vizualization of aggregated datasets (first, second, third
+   Time visualization of aggregated datasets (first, second, third
    three hours).
 
 Other interesting tool is :grasscmd:`g.gui.animation` which allows us

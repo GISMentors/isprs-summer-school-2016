@@ -33,7 +33,7 @@ The GRASS database structure contains three levels:
    default computational region.
 
 #. **Mapset** is a subdirectory in a location. It helps to organize maps
-   into logical groups or helps to separate pararel work of more users
+   into logical groups or helps to separate parallel work of more users
    on the same project (within one location).
 
 When you start GRASS you must to defined all these three items, see
@@ -41,7 +41,7 @@ figure bellow.
 
 .. figure:: images/welcome-screen.png
 
-   GRASS statup screen to choose database, location, and mapset.
+   GRASS startup screen to choose database, location, and mapset.
             
 The user have write access only to the current mapset, but she/he can
 access also maps from other mapset within one location, see figure
@@ -59,7 +59,7 @@ selected map by :grasscmd:`r.proj` (raster maps) or :grasscmd:`v.proj`
 (vector maps). GRASS doesn't support so-called
 reprojection-on-the-fly.
 
-.. notecmd:: GRASS can be started also from command line specifing
+.. notecmd:: GRASS can be started also from command line specifying
              full path to the mapset.
 
    .. code-block:: bash
@@ -120,7 +120,7 @@ formats`, from the main toolbar, or from command line as
 .. noteadvanced:: Import process can take a while. GRASS is a topological
           GIS. It means that importing vector data doesn't mean only
           converting data from one data format to another, but mainly
-          coverting from simple feature model to GRASS topological
+          converting from simple feature model to GRASS topological
           model, see figure bellow.
 
           .. figure:: images/grass7-topo.png
@@ -131,7 +131,7 @@ formats`, from the main toolbar, or from command line as
           During this process also topological errors are
           checked and repaired. Some topological errors is not
           possible to repair automatically without user specification,
-          in this case the user can fix remaing error using
+          in this case the user can fix remaining error using
           :grasscmd:`v.clean`.
              
 Import raster data
@@ -196,7 +196,7 @@ Raster maps can be added to layer tree from menu :menuselection:`File
    Dialog (:grasscmd:`d.vect`) for displaying raster data in the Map
    Display.
 
-RGB orthophotos has been splited by GRASS into three separate raster
+RGB orthophotos has been spitted by GRASS into three separate raster
 maps:
 
 * red channel (``.1``)
@@ -223,7 +223,7 @@ RGB composition can be added from Layer Manager toolbar |addrgb|.
 .. figure:: images/data-vizualization.png
    :class: large
         
-   Example of data vizualization.
+   Example of data visualization.
 
 Accessing GRASS Modules
 -----------------------
@@ -242,7 +242,7 @@ GRASS is modular system which consists of several hundreds tools
 
 The commands (modules) can be called from GUI dialogs and command
 line. Figure bellow shows calling :grasscmd:`r.null` module. The
-ekvivalent command for console would be:
+equivalent command for console would be:
 
 .. code-block:: bash
 
@@ -252,7 +252,7 @@ ekvivalent command for console would be:
 
    Dialog of :grasscmd:`r.null` module.
 
-.. note:: This command replaces in raster maps occurance of 0 a 255
+.. note:: This command replaces in raster maps occurrence of 0 a 255
           values by NULL value (no-data). Note that before running
           this command you need to set up computational region based
           on selected raster map (:grasscmd:`g.region`).
@@ -264,10 +264,10 @@ ekvivalent command for console would be:
           Also note that all three raster maps in composition should
           be modified by :grasscmd:`r.null`. This operation can be
           automated by :grasscmd:`Graphical Modeler <g.gui.gmodeler>`
-          or by scriping in Python, see :doc:`Lesson 3
+          or by scripting in Python, see :doc:`Lesson 3
           <../lesson3/index>` for details.
 
-          Perfoming NULL propagation can introduce holes into
+          Performing NULL propagation can introduce holes into
           image. One of solutions would be to create RGB composition
           using :grasscmd:`r.composite` and fill holes with
           combination of :grasscmd:`r.neighbors` (method=mode) and

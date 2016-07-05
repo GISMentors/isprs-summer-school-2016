@@ -32,7 +32,7 @@ Launching GIS.lab Desktop Client
 
 There are two different ways of launching GIS.lab Desktop. Depending
 on future usage, hardware and software possibilities and other similar
-factors, GIS.lab Desktop can be implemented using **virtal or physical
+factors, GIS.lab Desktop can be implemented using **virtual or physical
 mode**.
 
 Virtual mode can be used for any operating system. Original operating

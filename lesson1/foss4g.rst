@@ -101,7 +101,7 @@ Software used for training
 
 * `GRASS GIS <http://grass.osgeo.org>`_ for geospatial (raster,
   imagery, vector) data processing and providing spatial analysis.
-* `QGIS desktop <http://qgis.org>`_ for geospatial vizualization,
+* `QGIS desktop <http://qgis.org>`_ for geospatial visualization,
   creating hardcopy outputs, and publishing.
 * `QGIS server <http://qgis.org>`_ for serving published data and
   providing OGC Web Services.
