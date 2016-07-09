@@ -7,7 +7,7 @@ L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 
 var wmsLayer = L.tileLayer.wms(
-    'http://gislab:91/cgi-bin/qgis_mapserv.fcgi?map=cepicky/ISPRS_summerschool_ospublication.qgs',
+    'http://147.32.26.113:91/cgi-bin/qgis_mapserv.fcgi?map=cepicky/ISPRS_summerschool_ospublication.qgs',
     {
       layers: 'Ortophoto',
       format: 'image/png',

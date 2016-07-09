@@ -31,7 +31,7 @@ Testing OGC WFS directly
 Since we deployed our service as WFS too, we should be able to download `Roads`
 data as GML. The `GetCapabilities` request should look like::
 
-    http://gislab:91/cgi-bin/qgis_mapserv.fcgi?
+    http://147.32.26.113:91/cgi-bin/qgis_mapserv.fcgi?
     map=NAME/project.qgs&         <-- NOTE: this is not part of the WFS standard
     service=WFS&
     version=1.0.0&
@@ -39,12 +39,12 @@ data as GML. The `GetCapabilities` request should look like::
 
 Concrete example in our case:
 
-    http://gislab:91/cgi-bin/qgis_mapserv.fcgi?map=cepicky/ISPRS_summerschool_ospublication.qgs&service=WFS&request=GetCapabilities
+    http://147.32.26.113:91/cgi-bin/qgis_mapserv.fcgi?map=cepicky/ISPRS_summerschool_ospublication.qgs&service=WFS&request=GetCapabilities
 
 Now we can download *layer* `Primary_road` as GML file:
 
 
-    http://gislab:91/cgi-bin/qgis_mapserv.fcgi?map=cepicky/ISPRS_summerschool_ospublication.qgs&service=WFS&request=GetFeature&typename=Primary_road
+    http://147.32.26.113:91/cgi-bin/qgis_mapserv.fcgi?map=cepicky/ISPRS_summerschool_ospublication.qgs&service=WFS&request=GetFeature&typename=Primary_road
 
 
 Adding WFS layer to QGIS
@@ -59,7 +59,7 @@ Adding WFS layer to QGIS
     .. figure:: images/20_wfs.png
 
         Add new WFS connection with URL 
-        http://gislab:91/cgi-bin/qgis_mapserv.fcgi?map=cepicky/ISPRS_summerschool_ospublication.qgs
+        http://147.32.26.113:91/cgi-bin/qgis_mapserv.fcgi?map=cepicky/ISPRS_summerschool_ospublication.qgs
 
 #. Select required layer
 

@@ -78,7 +78,7 @@ QGIS project deployment
 
 #. In our case, the OGC OWS server is living in GIS.Lab server instance
 
-    http://gislab:91/cgi-bin/qgis_mapserv.fcgi
+    http://147.32.26.113:91/cgi-bin/qgis_mapserv.fcgi
 
 #. We have to point the `qgis_mapserver.fcgi` program to our project - we have to
    add `map` parameter to the URL 
@@ -100,18 +100,18 @@ QGIS project deployment
 
    All parameters are separated from the file name using `?` sign::
 
-            http://gislab:91/cgi-bin/qgis_mapserv.fcgi?
+            http://147.32.26.113:91/cgi-bin/qgis_mapserv.fcgi?
             map=cepicky/ISPRS_summerschool_ospublication.qgs&
             service=wms&
             request=getcapabilities
 
    Putting it to one line
 
-    http://gislab:91/cgi-bin/qgis_mapserv.fcgi?map=cepicky/ISPRS_summerschool_ospublication.qgs&service=wms&request=getcapabilities
+    http://147.32.26.113:91/cgi-bin/qgis_mapserv.fcgi?map=cepicky/ISPRS_summerschool_ospublication.qgs&service=wms&request=getcapabilities
 
 #. Now we can get the map
 
-   http://gislab:91/cgi-bin/qgis_mapserv.fcgi?map=cepicky/ISPRS_summerschool_ospublication.qgs&service=WMS&request=getmap&width=800&height=600&crs=epsg:32633&layers=Hydrology&format=image/png&bbox=527542,5.44521e+06,539858,5.45313e+06 
+   http://147.32.26.113:91/cgi-bin/qgis_mapserv.fcgi?map=cepicky/ISPRS_summerschool_ospublication.qgs&service=WMS&request=getmap&width=800&height=600&crs=epsg:32633&layers=Hydrology&format=image/png&bbox=527542,5.44521e+06,539858,5.45313e+06 
 
    .. figure:: images/17_getmap.png
 
@@ -135,7 +135,7 @@ Load Published WMS service to QGIS
 
     .. figure:: images/13_wms_client.png
 
-     Add new `WMS layer - New server` with URL http://gislab:91/cgi-bin/qgis_mapserv.fcgi?map=cepicky/ISPRS_summerschool_ospublication.qgs. The rest of parameters leave untouched.
+     Add new `WMS layer - New server` with URL http://147.32.26.113:91/cgi-bin/qgis_mapserv.fcgi?map=cepicky/ISPRS_summerschool_ospublication.qgs. The rest of parameters leave untouched.
 
 #. `Connect` to the server and select some layer, choose `PNG` image format,
    create name
