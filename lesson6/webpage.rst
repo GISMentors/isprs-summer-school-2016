@@ -60,7 +60,7 @@ Add some JSON data
 
 #. Get the data as JSON via WFS and save the to file `hydrology.json`
 
-    http://gislab:91/cgi-bin/qgis_mapserv.fcgi?map=cepicky/ISPRS_summerschool_ospublication.qgs&service=WFS&request=GetFeature&typename=HY_Watercourse_LineString&outputformat=GeoJSON
+    http://147.32.26.113:91/cgi-bin/qgis_mapserv.fcgi?map=cepicky/ISPRS_summerschool_ospublication.qgs&service=WFS&request=GetFeature&typename=HY_Watercourse_LineString&outputformat=GeoJSON
 
 #. Add new JSON layer to our script  `05_json.js <../_static/webapp/05_json.js>`_
 
