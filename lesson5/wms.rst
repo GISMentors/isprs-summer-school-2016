@@ -1,5 +1,5 @@
-OGC Web Mapping Service
------------------------
+OGC Web Map Service
+-------------------
 
 http://opengeospatial.org/standards/wms
 
@@ -21,9 +21,11 @@ Parameters for the map:
 
         http://my.maps-domain.org/wms
 
-    The parameters for the request are stored at the end of the url behind
-    starting `?` sign. Each parameter and it's value are separated with `&` sign
-    ::
+    The parameters for the request are stored at the end of the url
+    starting by `?` sign. Each parameter and it's value are separated
+    with `&` sign:
+
+      ::
 
         http://my.maps-domain.org/wms?parameter1=value1&parameter2=value2&...
 
@@ -50,22 +52,20 @@ QGIS project deployment
    .. figure:: images/10_publishing.png
 
         Fill short name, title, organisation, ... 
-
-        WMS Capabilities: click `Use Current Canvas Extent`
-
-        Add supported CRSs
+        WMS Capabilities: click `Use Current Canvas Extent`.
+        Add supported CRSs.
 
 #. `Select all` vector layers for OGC WFS and raster layers for OGC WCS services
 
     .. figure:: images/11_publishing.png
 
-        Enable WFS and WCS layers, you can limit image size for WMS too
+        Enable WFS and WCS layers, you can limit image size for WMS too.
 
 #. `Launch` test configuration
 
     .. figure:: images/12_publishing.png
 
-        Launch test configuration
+        Launch test configuration.
 
 #. Save the project as file *next to the `publication-data` directory*
 
@@ -74,19 +74,14 @@ QGIS project deployment
 
     .. figure:: images/16_copy.png
 
-
 #. Let's open our created QGIS project with raster and vector data!
 
-.. Parameter MAP, otherwise standard WMS request
-    http://localhost/cgi-bin/qgis_mapserv.fcgi?MAP=/home/jachym/Data/isprs/ISPRS%20Summer%20School%20workshop.qgs&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities
-
 #. In our case, the OGC OWS server is living in GIS.Lab server instance
-
 
     http://gislab:91/cgi-bin/qgis_mapserv.fcgi
 
 #. We have to point the `qgis_mapserver.fcgi` program to our project - we have to
-    add `map` parameter to the url 
+   add `map` parameter to the url 
 
 
     `map=cepicky/ISPRS_summerschool_ospublication.qgs`
@@ -101,7 +96,7 @@ QGIS project deployment
 
             key=value
 
-   Parameters are separated using `&` sign
+   Parameters are separated using `&` sign.
 
    All parameters are separated from the file name using `?` sign::
 
@@ -125,29 +120,31 @@ What have we done?
 ------------------
 
 .. figure:: images/deploying.png
-
-    Deploying of the project
+   :class: middle
+   
+   Deploying of the project
 
 Load Published WMS service to QGIS
 ----------------------------------
 
-.. note:: It's is wort to start new fresh empty QGIS project for this step for
-        not getting confused with the layers you may have in the layerswitcher
+.. note:: It's worth to start a new empty QGIS project for this step
+        to avoid confusion by all the layers you may have in the layer
+        switcher.
 
 #. In QGIS, you can now add new WMS server
 
     .. figure:: images/13_wms_client.png
 
-     Add new `WMS layer - New server` with URL http://gislab:91/cgi-bin/qgis_mapserv.fcgi?map=cepicky/ISPRS_summerschool_ospublication.qgs
-
-     And leave the rest
+     Add new `WMS layer - New server` with URL http://gislab:91/cgi-bin/qgis_mapserv.fcgi?map=cepicky/ISPRS_summerschool_ospublication.qgs. The rest of parameters leave untouched.
 
 #. `Connect` to the server and select some layer, choose `PNG` image format,
    create name
 
     .. figure:: images/14_wms_addlayer.png
 
-#. You now may have new raster layer, published from our WMS server
+#. Now you may have to see a new raster layer, published from our WMS
+   server
     
    .. figure:: images/deploying.png
-
+      :class: middle
+               

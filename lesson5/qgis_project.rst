@@ -1,7 +1,7 @@
 New QGIS project
 ================
 
-Let's create new project in QGIS-desktop
+Let's create a new project in QGIS Desktop:
 
 #. copy example dataset from `/mnt/repository/isprs/publication_workshop` to
    `Projects` directory
@@ -13,14 +13,14 @@ Let's create new project in QGIS-desktop
 
     .. figure:: images/01_qgis.png
 
-        Open new QGIS project
+        Open a new QGIS project.
 
 #. Set project properties: Name, CRS, relative data path
 
 
     .. figure:: images/02_projection.png
 
-        Set name of the project, CRS (EPSG:32633 WGS84/UTM33), relative path
+        Set name of the project, CRS (EPSG:32633 WGS84/UTM33), relative path.
 
 Ortophoto images
 ----------------
@@ -29,21 +29,20 @@ Ortophoto images
 
     .. figure:: images/03_ortophotos.png
 
-        Ortophoto images are stored in `publication-data/orthophoto_0_25_utm/north_up`
-
-        If asked, set EPSG:32633 WGS84/UTM33 the CRS value of input data
+        Ortophoto images are stored in `publication-data/orthophoto_0_25_utm/north_up`.
+        If asked, set EPSG:32633 WGS84/UTM33 the CRS value of input data.
 
 #. Set transparency of raster data to value `0`
 
     .. figure:: images/04_transparency.png
 
-        `Layer properties - Transparency` set `0`
+        Layer properties - Transparency set `0`.
 
 #. As result, have Ortophoto image of Telč
 
     .. figure:: images/05_transparency.png
 
-        Do not forget to create `Ortophoto` layer group in the layer switcher
+        Do not forget to create `Ortophoto` layer group in the layer switcher.
 
 Vector data
 -----------
@@ -52,13 +51,13 @@ Vector data
 
     .. figure:: images/06_hydrology.png
 
-        Data are stored in `publication-data/publication-data/isprire_hy_gml_etrf89/HY.290399b.gml`
+        Data are stored in `publication-data/publication-data/isprire_hy_gml_etrf89/HY.290399b.gml`.
 
 #. Select *all layers*
 
     .. figure:: images/07_hydrology.png
 
-        Click on `Select all` button
+        Click on `Select all` button.
 
 #. Create `Hydrology group`
 
@@ -67,6 +66,7 @@ Vector data
 #. Create map composition, play with styles
 
     .. figure:: images/08_map_composition.png
+
 
     :Cesta:             Path 
     :ElektrickeVedeni:  Wire 

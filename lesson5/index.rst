@@ -2,8 +2,6 @@
 Publication of spatial data using open source tools
 ***************************************************
 
-.. warning:: In progress...
-             
 Motivation for publishing spatial data
 ======================================
 
@@ -25,12 +23,14 @@ Components
 * API
 
 .. figure::  images/publishing.png
+   :class: middle
+        
+   Components needed for spatial data publication infrastructure.
 
-    Components needed for spatial data publication infrastructure
+Database, map server, client applications. As "client" - another server can
+be used too.
 
-    Database, map server, client applications. As "client" - another server can
-    be used too.
-
+**Topics**
 
 .. toctree::
    :maxdepth: 3

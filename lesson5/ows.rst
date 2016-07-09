@@ -1,13 +1,13 @@
 Communication protocols between the server and client
 =====================================================
 
-* Agreement between the server and the client about 
+* Agreement between the server and the client is about 
   
   *how to ask for the data*
 
   *how to send the data*
 
-* Basically API (application interface)
+* Basically API (application programming interface)
 
 OGC Open Web Services
 ---------------------
@@ -15,11 +15,14 @@ OGC Open Web Services
 organisation for developing and publishing standards in the geospatial domain.
 
 Among others OGC produces set of "Open Web Services" -- standards for publishing
-geospatial data. 3 most used standards are
+geospatial data. Three most used standards are:
 
 * OGC WMS - Web Mapping Service
 * OGC WFS - Web Feature Service
 * OGC WCS - Web Coverage Service
+
+QGIS and OWS
+------------
 
 .. toctree::
 

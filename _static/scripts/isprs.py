@@ -53,7 +53,6 @@ def main():
     os.environ['GRASS_OVERWRITE'] = '1'
     os.environ['GRASS_VERBOSE'] = '0'
     
-    # TODO: more cores
     for tile in options['tile'].split(','):
         print('Processing tile {}...'.format(tile))
         import_lidar(tile)

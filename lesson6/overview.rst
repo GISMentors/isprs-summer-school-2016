@@ -26,8 +26,9 @@ OpenLayers - GIS in JavaScript
 
 http://openlayers.org
 
-    .. figure:: images/openlayers.png
-
+.. figure:: images/openlayers.png
+    :class: small
+        
 Pros:
 
 * Allmighty

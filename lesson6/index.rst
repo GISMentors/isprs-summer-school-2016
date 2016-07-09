@@ -12,7 +12,7 @@ Motivation for web mapping applications
 What we need
 ============
 
-    *Programming JavaScript*
+    *JavaScript Programming*
 
 .. toctree::
    :maxdepth: 3

@@ -28,8 +28,6 @@ WFS Server should be able to handle 3 types of requests:
 Testing OGC WFS directly
 ------------------------
 
-.. todo:: Otestovat WFS request a odladit URL
-
 Since we deployed our service as WFS too, we should be able to download `Roads`
 data as GML. The `GetCapabilities` request should look like::
 
@@ -41,10 +39,9 @@ data as GML. The `GetCapabilities` request should look like::
 
 Concrete example in our case:
 
-
     http://gislab:91/cgi-bin/qgis_mapserv.fcgi?map=cepicky/ISPRS_summerschool_ospublication.qgs&service=WFS&request=GetCapabilities
 
-We now can download *layer* `Primary_road` as GML file:
+Now we can download *layer* `Primary_road` as GML file:
 
 
     http://gislab:91/cgi-bin/qgis_mapserv.fcgi?map=cepicky/ISPRS_summerschool_ospublication.qgs&service=WFS&request=GetFeature&typename=Primary_road
@@ -53,10 +50,11 @@ We now can download *layer* `Primary_road` as GML file:
 Adding WFS layer to QGIS
 ------------------------
 
-.. note:: It's is wort to start new fresh empty QGIS project for this step for
-        not getting confused with the layers you may have in the layerswitcher.
+.. note:: It's worth to start a new empty QGIS project for this step
+        to avoid confusion by all the layers you may have in the layer
+        switcher.
 
-#. Add new WFS server (`Layer - Add WFS Layer - New server`)
+#. Add new WFS server (:menuselection:`Layer --> Add WFS Layer --> New server`)
 
     .. figure:: images/20_wfs.png
 

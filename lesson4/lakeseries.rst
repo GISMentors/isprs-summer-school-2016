@@ -1,14 +1,14 @@
-Time-space series based flooding simulation
-===========================================
+Space-time series for flooding simulation
+=========================================
 
-In this section we extend flooding simulation effort performed by
+In this section we extend our flooding simulation effort performed by
 :doc:`r.lake <../lesson2/hydrology>` and later automated by
 :doc:`graphical modeler <../lesson3/modeler>` and :doc:`python script
 <../lesson3/pyscripting>`. Module :grasscmd:`r.lake` itself allows to
 generate only one output raster map within one run. This limitation is
-surpass by addon *r.lake.series* (you can install it by
+surpassed by addon *r.lake.series* (you can install it by
 :grasscmd:`g.extension`). This module outputs multiple raster maps
-registered in time-space dataset.
+registered in space-time raster dataset.
 
 .. code-block:: bash
 
@@ -16,13 +16,13 @@ registered in time-space dataset.
    water_level_step=0.1 coordinates=531963.147664,5626869.62523 \
    time_step=10 nproc=3
 
-In the example above we create time-space series between water levels
-990 and 995 with step 0.1 m. Time step is 10min. To increase
-computation speed we use three cores. The result is stored in raster
-time-space dataset named *lakes37*.
+In the example above we created space-time series between water levels
+990 and 995 with step 0.1 m. Time step is 10 min. To increase
+computation speed we used three cores. The result is stored in raster
+space-time dataset named *lakes37*.
 
 Basic information about output dataset can be obtained by
-:grasscmd:`t.info`.
+:grasscmd:`t.info` command.
 
 .. code-block:: bash
 
@@ -61,14 +61,13 @@ Time topology information can be obtained by :grasscmd:`t.topology`.
 Space-time Data Querying
 ------------------------
 
-By :grasscmd:`t.list.rast` can be printed raster maps within given
-time period. In example below will be printed raster maps generated
-with first hour of flooding simulation.
+Using :grasscmd:`t.list.rast` can be printed raster maps within given
+time period. In the example below are printed raster maps generated
+within the first hour of flooding simulation.
 
 .. code-block:: bash
 
    t.rast.list input=lakes37 order=start_time where="start_time < 60"
-
    
    name|mapset|start_time|end_time
    lakes37_990.0|landa|1|None
@@ -93,18 +92,19 @@ Univariate statistic can be calculated by :grasscmd:`t.rast.univar`.
    lakes37_990.5@landa|51|None|7.17042749303603|0.00030517578125|21.1248779296875|...
 
 Data aggregation can be performed by :grasscmd:`t.rast.aggregate`. In
-example below will be data aggregated by 1 hour.
+the example below data are aggregated by 1 hour.
 
 .. code-block:: bash
 
    t.rast.aggregate input=lakes37 output=lakes37_h basename=ag granularity=60 nproc=3
 
-The command generated a new space time dataset which can be used for
+The command generates a new space time dataset which can be used for
 subsequent analysis like univariate statistics:
 
 .. code-block:: bash
 
-   t.rast.univar lakes37_h
+   t.rast.univar input=lakes37_h
+
    id|start|end|mean|min|max|...
    ag_00001@landa|1|61|6.92733335433335|0.00030517578125|20.8748779296875|...
    ag_00002@landa|61|121|7.11830269624711|0.0006103515625|21.4748738606771|...
@@ -121,7 +121,7 @@ Space-time Data Extracting
 
 Raster spatial-temporal data can be extract into new datasets using
 :grasscmd:`t.rast.extract`. In the example below will be created three
-new datasets for first, second and third three hours.
+new datasets for first, second and third three hours of flooding.
 
 .. code-block:: bash
 
@@ -135,7 +135,7 @@ Aggregation can be done by :grasscmd:`t.rast.series`:
                 
    t.rast.series input=lakes37_1 output=lakes37_1_avg method=average
 
-Let's compute univariate statistics by :grasscmd:`r.univar`:
+Let's compute also univariate statistics by :grasscmd:`r.univar`:
 
 .. code-block:: bash
 
@@ -171,7 +171,7 @@ creating animations. Example:
 
 .. figure:: images/animation.png
 
-   GRASS tools for creating animations.
+   GRASS tool for creating animations.
 
 .. figure:: images/lakes37.gif
 

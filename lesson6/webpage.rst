@@ -55,12 +55,12 @@ And have a look at our web page `04_wms.html <../_static/webapp/04_wms.html>`_
 Add some JSON data
 ------------------
 
+.. note:: Mark parameters OutputFormat=GeoJSON and
+          TypeName=HY_Watercourse_LineString
+
 #. Get the data as JSON via WFS and save the to file `hydrology.json`
 
     http://gislab:91/cgi-bin/qgis_mapserv.fcgi?map=cepicky/ISPRS_summerschool_ospublication.qgs&service=WFS&request=GetFeature&typename=HY_Watercourse_LineString&outputformat=GeoJSON
-
-
-    .. note:: Mark parameters OutputFormat=GeoJSON and TypeName=HY_Watercourse_LineString
 
 #. Add new JSON layer to our script  `05_json.js <../_static/webapp/05_json.js>`_
 
