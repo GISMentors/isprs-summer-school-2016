@@ -22,14 +22,15 @@ Let's create a new project in QGIS Desktop:
 
         Set name of the project, CRS (EPSG:32633 WGS84/UTM33), relative path.
 
-Ortophoto images
-----------------
+Orthophoto images
+-----------------
 
-#. Load Ortophoto images from `publication-data/orthophoto_0_25_utm/north_up`
+#. Load Orthophoto images from
+   `publication-data/orthophoto_0_25_utm/north_up`
 
     .. figure:: images/03_ortophotos.png
 
-        Ortophoto images are stored in `publication-data/orthophoto_0_25_utm/north_up`.
+        Orthophoto images are stored in `publication-data/orthophoto_0_25_utm/north_up`.
         If asked, set EPSG:32633 WGS84/UTM33 the CRS value of input data.
 
 #. Set transparency of raster data to value `0`
@@ -38,11 +39,11 @@ Ortophoto images
 
         Layer properties - Transparency set `0`.
 
-#. As result, have Ortophoto image of Telč
+#. As result, have orthophoto image of Telč
 
     .. figure:: images/05_transparency.png
 
-        Do not forget to create `Ortophoto` layer group in the layer switcher.
+        Do not forget to create `Orthophoto` layer group in the layer switcher.
 
 Vector data
 -----------

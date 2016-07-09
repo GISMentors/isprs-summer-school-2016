@@ -1,8 +1,8 @@
 Open source and free software web mapping applications
 ======================================================
 
-Leaflet - the yeasy one
------------------------
+Leaflet - the easy one
+----------------------
 
 http://leafletjs.com
 
@@ -13,7 +13,7 @@ Pros:
 * Fast to start with
 * Easy
 * Can handle big data
-* Loads of pluings
+* Loads of plugins
 * Small
 
 Cons:
@@ -31,9 +31,9 @@ http://openlayers.org
         
 Pros:
 
-* Allmighty
+* Almighty
 * Real GIS library
-* Support for every GIS realated problem
+* Support for every GIS related problem
 
 Cons:
 

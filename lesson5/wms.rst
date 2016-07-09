@@ -21,7 +21,7 @@ Parameters for the map:
 
         http://my.maps-domain.org/wms
 
-    The parameters for the request are stored at the end of the url
+    The parameters for the request are stored at the end of the URL
     starting by `?` sign. Each parameter and it's value are separated
     with `&` sign:
 
@@ -81,7 +81,7 @@ QGIS project deployment
     http://gislab:91/cgi-bin/qgis_mapserv.fcgi
 
 #. We have to point the `qgis_mapserver.fcgi` program to our project - we have to
-   add `map` parameter to the url 
+   add `map` parameter to the URL 
 
 
     `map=cepicky/ISPRS_summerschool_ospublication.qgs`

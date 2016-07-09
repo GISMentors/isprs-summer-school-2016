@@ -6,7 +6,7 @@ Motivation for publishing spatial data
 ======================================
 
 * share the data with colleagues, bots
-* visualise the data (make nice maps)
+* visualize the data (make nice maps)
 * reuse the data
 * share BIG data
 * add value to data (build map applications)
